@@ -1,7 +1,7 @@
 import os
 from abc import abstractmethod
 from typing import Callable
-from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox
+from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QColorDialog
 
 
 class WorkflowManager(QMainWindow):
@@ -58,6 +58,12 @@ class WorkflowManager(QMainWindow):
             initialFilter=initial_filter
         )
         return response[0]
+
+    def _get_color(self) -> str:
+        color = QColorDialog().getColor()
+        if not color.isValid():
+            raise ValueError("Color is not valid.")
+        return color.name()
 
     def _get_directory(self):
         return QFileDialog.getExistingDirectory(self, caption='Select a folder')
