@@ -2,7 +2,7 @@ import os
 from abc import abstractmethod
 from typing import Callable
 
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QColor
 from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QColorDialog, QFontDialog
 
 
@@ -63,11 +63,13 @@ class WorkflowManager(QMainWindow):
 
     @staticmethod
     def _get_color() -> str:
-        color = QColorDialog().getColor()
-        if not color.isValid():
-            raise ValueError("Color is not valid.")
+        return QColorDialog().getColor()
+
+    def _get_color_name(self, color: QColor = None):
+        if not color:
+            color = self._get_color()
         return color.name()
-    
+
     @staticmethod
     def _get_font() -> QFont:
         font, valid = QFontDialog.getFont()
