@@ -1,5 +1,6 @@
 import os
 from abc import abstractmethod
+from pathlib import Path
 from typing import Callable
 
 from PyQt5.QtGui import QFont, QColor
@@ -40,22 +41,22 @@ class WorkflowManager(QMainWindow):
         """ Validation on required inputs. ie. Ensure file exists, ensure value is int, etc. """
         return True
 
-    def _get_file_name(self, file_filter=None, initial_filter=None):
+    def _get_file_name(self, file_filter=None, initial_filter=None, directory=None):
         # file_filter = 'Data File (*.xlsx *.csv *.dat);; Excel File (*.xlsx *.xls)'
         response = QFileDialog.getOpenFileName(
             parent=self,
             caption='Select a file',
-            directory=os.getcwd(),
+            directory=directory or os.getcwd(),
             filter=file_filter,
             initialFilter=initial_filter
         )
         return response[0]
 
-    def _get_file_names(self, file_filter=None, initial_filter=None):
+    def _get_file_names(self, file_filter=None, initial_filter=None, directory=None):
         response = QFileDialog.getOpenFileNames(
             parent=self,
             caption='Select files',
-            directory=os.getcwd(),
+            directory=directory or os.getcwd(),
             filter=file_filter,
             initialFilter=initial_filter
         )
@@ -85,11 +86,14 @@ class WorkflowManager(QMainWindow):
     def _get_directory(self):
         return QFileDialog.getExistingDirectory(self, caption='Select a folder')
 
-    def _get_save_file_name(self, initial_file_name='save.txt', file_filter=None, initial_filter=None):
+    def _get_save_file_name(self, initial_file_name='save.txt', file_filter=None, initial_filter=None, directory=None):
+        directory = Path(directory or os.getcwd())
+        initial_file_path = directory / initial_file_name
+
         response = QFileDialog.getSaveFileName(
             parent=self,
             caption='Save to file',
-            directory=initial_file_name,
+            directory=initial_file_path,
             filter=file_filter,
             initialFilter=initial_filter
         )
