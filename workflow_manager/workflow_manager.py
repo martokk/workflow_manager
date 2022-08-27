@@ -1,7 +1,9 @@
 import os
 from abc import abstractmethod
 from typing import Callable
-from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QColorDialog
+
+from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QColorDialog, QFontDialog
 
 
 class WorkflowManager(QMainWindow):
@@ -59,11 +61,24 @@ class WorkflowManager(QMainWindow):
         )
         return response[0]
 
-    def _get_color(self) -> str:
+    @staticmethod
+    def _get_color() -> str:
         color = QColorDialog().getColor()
         if not color.isValid():
             raise ValueError("Color is not valid.")
         return color.name()
+    
+    @staticmethod
+    def _get_font() -> QFont:
+        font, valid = QFontDialog.getFont()
+        if valid:
+            return font
+        raise FileNotFoundError("Font Not Found.")
+
+    def _get_font_name(self, font: QFont = None):
+        if not font:
+            font = self._get_font()
+        return font.toString().split(',')[0]
 
     def _get_directory(self):
         return QFileDialog.getExistingDirectory(self, caption='Select a folder')
