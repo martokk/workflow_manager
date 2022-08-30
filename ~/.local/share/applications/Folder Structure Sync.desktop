@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Folder Structure Sync
-Icon=/media/martokk/FILES/v3services/Projects/In-Progress/folder_structure_sync/folder_structure_sync/resources/icon.png
-Type=Application
-Exec=/media/martokk/FILES/v3services/Projects/In-Progress/folder_structure_sync/dist_linux/folder_structure_sync
-Terminal=false
-Categories=X-Utilities;X-vApps;X-v3apps
-X-Desktop-File-Install-Version=0.24

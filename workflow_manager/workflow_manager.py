@@ -83,8 +83,8 @@ class WorkflowManager(QMainWindow):
             font = self._get_font()
         return font.toString().split(',')[0]
 
-    def _get_directory(self):
-        return QFileDialog.getExistingDirectory(self, caption='Select a folder')
+    def _get_directory(self, directory=None):
+        return QFileDialog.getExistingDirectory(self, caption='Select a folder', directory=directory)
 
     def _get_save_file_name(self, initial_file_name='save.txt', file_filter=None, initial_filter=None, directory=None):
         directory = Path(directory or os.getcwd())
