@@ -1,51 +1,4 @@
-# workflow_manager
-
----
-
----
-
-## Very first steps (DELETE THIS AFTER COMPLETING!)
-
-### Initialize your code
-
-1. Initialize `git` inside your repo:
-
-```bash
-cd workflow_manager && git init
-```
-
-2. If you don't have `Poetry` installed run:
-
-```bash
-make poetry-download
-```
-
-3. Initialize poetry and install `pre-commit` hooks:
-
-```bash
-make install
-make pre-commit-install
-```
-
-4. Run the codestyle:
-
-```bash
-make codestyle
-```
-
-5. Upload initial code to GitHub:
-
-```bash
-git add .
-git commit -m ":tada: Initial commit"
-git branch -M main
-git remote add origin https://github.com/martokk/workflow_manager.git
-git push -u origin main
-```
-
-Read more on the DEV_README.md file.
-
----
+# Workflow Manager
 
 ---
 
@@ -81,8 +34,6 @@ or install with `Poetry`
 ```bash
 poetry add workflow_manager
 ```
-
-
 
 ## 📈 Releases
 
