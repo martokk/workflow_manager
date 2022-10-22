@@ -1,0 +1,13 @@
+# This file contains values from Cookiecutter
+
+default_context:
+  project_name: "workflow_manager"
+  project_description: "A python library for the vApp's 'workflow_manager' applications."
+  organization: "v3services"
+  license: "MIT"
+  minimal_python_version: "3.10"
+  github_name: "martokk"
+  email: "25113632+martokk@users.noreply.github.com"
+  version: "0.0.1"
+  line_length: "100"
+  create_example_template: "none"
