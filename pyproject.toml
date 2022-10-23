@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "workflow_manager"
-version = "0.0.1"
+version = "0.0.2"
 description = "A python library for the vApp's 'workflow_manager' applications."
 readme = "README.md"
 authors = ["v3services <25113632+martokk@users.noreply.github.com>"]
@@ -118,6 +118,8 @@ exclude = [
     "pyqt5_ui\\.py$",  # TOML's double-quoted strings require escaping backslashes
 ]
 
+[mypy-*.resources]
+ignore_errors = True
 
 [tool.pyright]
 exclude = ["**/pyqt5_ui.py", "pyqt5_ui.py"]

@@ -1,10 +1,9 @@
+from abc import ABCMeta, abstractmethod
 import traceback
-from abc import ABC, abstractmethod
-
 from loguru import logger
 
 
-class ActionScript(ABC):
+class ActionScript(metaclass=ABCMeta):
     @abstractmethod
     def script(self, **kwargs: object) -> str:
         print(f"Hello World. {kwargs=}")

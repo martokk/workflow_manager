@@ -1,14 +1,13 @@
 import os
 from abc import abstractmethod
-from collections.abc import Callable
 from pathlib import Path
+from typing import Any, Callable
 
 from PyQt5.QtGui import QColor, QFont
-from PyQt5.QtWidgets import QColorDialog, QFileDialog, QFontDialog, QMainWindow, QMessageBox
+from PyQt5.QtWidgets import (QColorDialog, QFileDialog, QFontDialog,
+                             QMainWindow, QMessageBox)
 
 from workflow_manager.action_script import ActionScript
-
-from .pyqt5_ui import Ui_MainWindow
 
 CWD = os.getcwd()
 
@@ -16,7 +15,7 @@ CWD = os.getcwd()
 class WorkflowManager(QMainWindow):
     def __init__(
         self,
-        ui: Ui_MainWindow,
+        ui: 'Ui_MainWindow',
         app_name: str = "WorkflowManager",
         statusbar: str = "App designed by v3services",
         pos_x: int = 0,
@@ -52,9 +51,9 @@ class WorkflowManager(QMainWindow):
         self.ui.actionAbout.triggered.connect(self.display_about_message_box)  # type: ignore
 
     @abstractmethod
-    def validate_inputs(self, **kwargs: object) -> bool:
+    def validate_inputs(self, **kwargs: object) -> Any:
         """Validation on required inputs. ie. Ensure file exists, ensure value is int, etc."""
-        return True
+        return
 
     def _get_file_name(
         self,
