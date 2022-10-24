@@ -23,6 +23,7 @@ uninstall-poetry: ## Uninstall Poetry
 
 .PHONY: install-pyinstaller
 install-pyinstaller: ## Download and install PyInstaller
+	poetry run sudo apt install libpython3.10-dev -y
 	poetry add pyinstaller@latest pillow@latest
 
 .PHONY: remove-pyinstaller
@@ -119,7 +120,7 @@ build-pyinstaller-linux: ## Build Linux Executable
 		--onefile \
 		--windowed \
 		--paths=./$(IMAGE) \
-		--icon=./$(IMAGE)/resources/images/icon.png \
+		--icon=./assets/images/icon.png \
 		--workpath=./build_linux \
 		--distpath=./dist_linux
 
@@ -130,7 +131,7 @@ build-pyinstaller-win: ## Build Windows Executable
 		--onefile \
 		--windowed \
 		--paths=./$(IMAGE) \
-		--icon=./$(IMAGE)/resources/images/icon.png \
+		--icon=./assets/images/icon.png \
 		--workpath=./build_win \
 		--distpath=./dist_win
 

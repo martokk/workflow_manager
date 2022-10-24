@@ -1,5 +1,3 @@
-from typing import Optional
-
 from dataclasses import dataclass
 from pathlib import Path
 

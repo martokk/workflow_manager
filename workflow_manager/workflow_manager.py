@@ -1,32 +1,19 @@
-from typing import Any, Callable
+from typing import Any
 
 import os
 from abc import abstractmethod
+from collections.abc import Callable
 from pathlib import Path
 
 from loguru import logger
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QColor, QFont
 
-from workflow_manager_example.workflow_manager.action_script import ActionScript
-from workflow_manager_example.workflow_manager.config import Config, import_pyproject_config
+from workflow_manager.action_script import ActionScript
+from workflow_manager.config import Config, import_pyproject_config
+from workflow_manager.pyqt5_ui import Ui_MainWindow
 
 CWD = os.getcwd()
-
-
-# pylint: disable=invalid-name,too-few-public-methods
-class Ui_MainWindow:
-    def __init__(self) -> None:
-        self.centralwidget = QtWidgets.QWidget()
-        self.header = QtWidgets.QWidget()
-        self.header_app_name = QtWidgets.QLabel()
-        self.body = QtWidgets.QWidget()
-        self.script_output = QtWidgets.QGroupBox()
-        self.script_output_text_edit = QtWidgets.QPlainTextEdit()
-        self.about_action = QtWidgets.QAction()
-
-    def setupUi(self, MainWindow: QtWidgets.QMainWindow) -> None:
-        pass
 
 
 class WorkflowManager(QtWidgets.QMainWindow):
@@ -40,7 +27,7 @@ class WorkflowManager(QtWidgets.QMainWindow):
         logger.info(f"WorkflowManager.config: loaded ok. {self.config=}")
 
         # Load UI
-        self.ui = self.ui or Ui_MainWindow()
+        self.ui: Ui_MainWindow = self.ui or Ui_MainWindow()
         self.ui.setupUi(self)
 
         # Customize Window
@@ -174,7 +161,7 @@ class WorkflowManager(QtWidgets.QMainWindow):
     def display_about_message_box(self) -> None:
         dlg = QtWidgets.QMessageBox(self)
         dlg.setWindowTitle("")
-        dlg.setIcon(QtWidgets.QMessageBox.Information)  # type: ignore
+        dlg.setIcon(QtWidgets.QMessageBox.Information)
         dlg.setText(self.config.about_text)
         dlg.exec()
 

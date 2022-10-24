@@ -26,7 +26,7 @@ A python library for the vApp's 'workflow_manager' applications.
 ## Installation
 
 ```bash
-pip install -U workflow_manager
+pip install workflow_manager
 ```
 
 or install with `Poetry`
