@@ -1,8 +1,9 @@
+from typing import Any
+
 import os
 from abc import abstractmethod
 from collections.abc import Callable
 from pathlib import Path
-from typing import Any
 
 from loguru import logger
 from PyQt5 import QtWidgets
