@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "workflow_manager"
-version = "0.0.2"
+version = "0.1.0"
 description = "A python library for the vApp's 'workflow_manager' applications."
 readme = "README.md"
 authors = ["v3services <25113632+martokk@users.noreply.github.com>"]
