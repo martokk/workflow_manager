@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>609</width>
-    <height>600</height>
+    <width>611</width>
+    <height>620</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../89a05bdc/resources.qrc">
+   <iconset>
     <normaloff>:/resources/icon</normaloff>:/resources/icon</iconset>
   </property>
   <property name="statusTip">
@@ -31,7 +31,7 @@
        <number>6</number>
       </property>
       <item>
-       <layout class="QHBoxLayout" name="headerHorizontalLayout">
+       <layout class="QHBoxLayout" name="header_2">
         <item>
          <spacer name="horizontalSpacerLeft">
           <property name="orientation">
@@ -46,7 +46,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="headerIcon">
+         <widget class="QLabel" name="header_icon">
           <property name="enabled">
            <bool>true</bool>
           </property>
@@ -81,7 +81,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="headerAppName">
+         <widget class="QLabel" name="header_app_name">
           <property name="font">
            <font>
             <pointsize>20</pointsize>
@@ -117,21 +117,21 @@
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="script" native="true">
+     <widget class="QWidget" name="body" native="true">
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QGroupBox" name="scriptAction">
+        <widget class="QGroupBox" name="run_script">
          <property name="title">
-          <string>Action 1: Run Report</string>
+          <string>Run Script</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <layout class="QGridLayout" name="gridLayout">
+           <layout class="QGridLayout" name="run_script_grid_layout">
             <item row="0" column="2">
-             <widget class="QLineEdit" name="line1LineEdit"/>
+             <widget class="QLineEdit" name="line1_line_edit"/>
             </item>
             <item row="1" column="3">
-             <widget class="QPushButton" name="line2BrowseButton">
+             <widget class="QPushButton" name="line2_browse_button">
               <property name="text">
                <string>Browse</string>
               </property>
@@ -142,10 +142,10 @@
              </widget>
             </item>
             <item row="1" column="2">
-             <widget class="QLineEdit" name="line2LineEdit"/>
+             <widget class="QLineEdit" name="line2_line_edit"/>
             </item>
             <item row="3" column="3">
-             <widget class="QPushButton" name="runScriptButton">
+             <widget class="QPushButton" name="run_script_button">
               <property name="text">
                <string>Run Script</string>
               </property>
@@ -156,7 +156,7 @@
              </widget>
             </item>
             <item row="3" column="2">
-             <spacer name="runScriptHorizontalSpacer">
+             <spacer name="horizontal_spacer2">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -169,7 +169,7 @@
              </spacer>
             </item>
             <item row="0" column="3">
-             <widget class="QPushButton" name="line1BrowseButton">
+             <widget class="QPushButton" name="line1_browse_button">
               <property name="text">
                <string>Browse</string>
               </property>
@@ -180,21 +180,21 @@
              </widget>
             </item>
             <item row="0" column="1">
-             <widget class="QLabel" name="line1Label">
+             <widget class="QLabel" name="line1_label">
               <property name="text">
                <string>line1Label</string>
               </property>
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QLabel" name="line2Label">
+             <widget class="QLabel" name="line2_label">
               <property name="text">
                <string>line2Label</string>
               </property>
              </widget>
             </item>
             <item row="2" column="2">
-             <spacer name="horizontalSpacer">
+             <spacer name="horizontal_spacer1">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -212,13 +212,13 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="scriptOutput">
+        <widget class="QGroupBox" name="script_output">
          <property name="title">
           <string>Script Output:</string>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_3">
+         <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QPlainTextEdit" name="actionPlainTextEdit"/>
+           <widget class="QPlainTextEdit" name="script_output_text_edit"/>
           </item>
          </layout>
         </widget>
@@ -233,26 +233,17 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>609</width>
+     <width>611</width>
      <height>19</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuScripts">
-    <property name="title">
-     <string>Scripts</string>
-    </property>
-    <addaction name="actionMain"/>
-    <addaction name="separator"/>
-   </widget>
-   <widget class="QMenu" name="menuAbout">
+   <widget class="QMenu" name="about_menu">
     <property name="title">
      <string>About</string>
     </property>
-    <addaction name="actionAbout"/>
-    <addaction name="actionCustom"/>
+    <addaction name="about_action"/>
    </widget>
-   <addaction name="menuScripts"/>
-   <addaction name="menuAbout"/>
+   <addaction name="about_menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionMain">
@@ -260,7 +251,7 @@
     <string>Main</string>
    </property>
   </action>
-  <action name="actionAbout">
+  <action name="about_action">
    <property name="text">
     <string>About</string>
    </property>
@@ -272,7 +263,7 @@
   </action>
  </widget>
  <resources>
-  <include location="../89a05bdc/resources.qrc"/>
+  <include location="../83d17147/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

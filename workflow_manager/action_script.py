@@ -1,5 +1,6 @@
-from abc import ABCMeta, abstractmethod
 import traceback
+from abc import ABCMeta, abstractmethod
+
 from loguru import logger
 
 
