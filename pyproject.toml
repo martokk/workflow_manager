@@ -53,6 +53,8 @@ coverage = "^6.1.2"
 coverage-badge = "^1.1.0"
 pytest-html = "^3.1.1"
 pytest-cov = "^4.0.0"
+pyqt5-stubs = "^5.15.6.0"
+types-toml = "^0.10.8"
 
 [tool.black]
 # https://github.com/psf/black
@@ -117,9 +119,6 @@ warn_unused_ignores = true
 exclude = [
     "pyqt5_ui\\.py$",  # TOML's double-quoted strings require escaping backslashes
 ]
-
-[mypy-*.resources]
-ignore_errors = True
 
 [tool.pyright]
 exclude = ["**/pyqt5_ui.py", "pyqt5_ui.py"]
