@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/martokk/cookiecutter_python/",
-  "commit": "9e221ce21812893751f93cca80a72efd63596606",
+  "commit": "6824f02670e7da6e50c3de13c113824f936006a8",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -17,6 +17,7 @@
       "version": "0.0.1",
       "line_length": "100",
       "create_example_template": "none",
+      "create_dockerfile_template": "yes",
       "_copy_without_render": [
         "poetry.lock"
       ],
