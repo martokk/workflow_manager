@@ -144,7 +144,7 @@ class WorkflowManager(QtWidgets.QMainWindow):
 
     def print_to_output(self, text: str) -> None:
         text = f"\n{text}" if self.ui.script_output_text_edit.toPlainText() else text
-        return self.ui.script_output_text_edit.appendPlainText(text)
+        self.ui.script_output_text_edit.appendPlainText(text)
 
     def display_script_completed_message_box(self) -> QtWidgets.QMessageBox.StandardButton:
         logger.success("The script successfully completed!")
