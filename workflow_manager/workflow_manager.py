@@ -27,7 +27,7 @@ class WorkflowManager(QtWidgets.QMainWindow):
         logger.info(f"WorkflowManager.config: loaded ok. {self.config=}")
 
         # Load UI
-        self.ui: Ui_MainWindow = self.ui or Ui_MainWindow()
+        self.ui: Any = self.ui or Ui_MainWindow()
         self.ui.setupUi(self)
 
         # Customize Window
