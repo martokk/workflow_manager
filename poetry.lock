@@ -578,7 +578,7 @@ pytest-metadata = "*"
 
 [[package]]
 name = "pytest-metadata"
-version = "2.0.3"
+version = "2.0.4"
 description = "pytest plugin for test session metadata"
 category = "dev"
 optional = false
@@ -1134,6 +1134,10 @@ pyqt5-sip = [
     {file = "PyQt5_sip-12.11.0-cp310-cp310-manylinux1_x86_64.whl", hash = "sha256:4031547dfb679be309094bfa79254f5badc5ddbe66b9ad38e319d84a7d612443"},
     {file = "PyQt5_sip-12.11.0-cp310-cp310-win32.whl", hash = "sha256:ad21ca0ee8cae2a41b61fc04949dccfab6fe008749627d94e8c7078cb7a73af1"},
     {file = "PyQt5_sip-12.11.0-cp310-cp310-win_amd64.whl", hash = "sha256:3126c84568ab341c12e46ded2230f62a9a78752a70fdab13713f89a71cd44f73"},
+    {file = "PyQt5_sip-12.11.0-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:bd733667098cac70e89279d9c239106d543fb480def62a44e6366ccb8f68510b"},
+    {file = "PyQt5_sip-12.11.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:ec1d8ce50be76c5c1d1c86c6dc0ccacc2446172dde98b663a17871f532f9bd44"},
+    {file = "PyQt5_sip-12.11.0-cp311-cp311-win32.whl", hash = "sha256:43dfe6dd409e713edeb67019b85419a7a0dc9923bfc451d6cf3778471c122532"},
+    {file = "PyQt5_sip-12.11.0-cp311-cp311-win_amd64.whl", hash = "sha256:afa4ffffc54e306669bf2b66ea37abbc56c5cdda4f3f474d20324e3634302b12"},
     {file = "PyQt5_sip-12.11.0-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:0f77655c62ec91d47c2c99143f248624d44dd2d8a12d016e7c020508ad418aca"},
     {file = "PyQt5_sip-12.11.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:ec5e9ef78852e1f96f86d7e15c9215878422b83dde36d44f1539a3062942f19c"},
     {file = "PyQt5_sip-12.11.0-cp37-cp37m-win32.whl", hash = "sha256:d12b81c3a08abf7657a2ebc7d3649852a1f327eb2146ebadf45930486d32e920"},
@@ -1165,8 +1169,8 @@ pytest-html = [
     {file = "pytest_html-3.2.0-py3-none-any.whl", hash = "sha256:868c08564a68d8b2c26866f1e33178419bb35b1e127c33784a28622eb827f3f3"},
 ]
 pytest-metadata = [
-    {file = "pytest_metadata-2.0.3-py3-none-any.whl", hash = "sha256:7fbb5a09110a7f62060ecad77110c6481e4e3a85e46556605b323fc97c072c7f"},
-    {file = "pytest_metadata-2.0.3.tar.gz", hash = "sha256:4a09b7582a4b8307be7c604bc392d33b9cc03831a5ed62f9bc3d08e4bc721250"},
+    {file = "pytest_metadata-2.0.4-py3-none-any.whl", hash = "sha256:acb739f89fabb3d798c099e9e0c035003062367a441910aaaf2281bc1972ee14"},
+    {file = "pytest_metadata-2.0.4.tar.gz", hash = "sha256:fcc653f65fe3035b478820b5284fbf0f52803622ee3f60a2faed7a7d3ba1f41e"},
 ]
 pytest-mock = [
     {file = "pytest-mock-3.10.0.tar.gz", hash = "sha256:fbbdb085ef7c252a326fd8cdcac0aa3b1333d8811f131bdcc701002e1be7ed4f"},
