@@ -32,7 +32,7 @@ classifiers = [  #! Update me
 [tool.poetry.dependencies]
 python = "^3.10"
 loguru = "^0.6.0"
-pyqt5 = "^5.15.7"
+pyqt5 = "^5.15.9"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "^1.7.1"
