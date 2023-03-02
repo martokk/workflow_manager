@@ -36,7 +36,7 @@ pyqt5 = "^5.15.7"
 
 [tool.poetry.group.dev.dependencies]
 bandit = "^1.7.1"
-black = {version = "^22.3.0", allow-prereleases = true}
+black = {version = "^23.1.0", allow-prereleases = true}
 darglint = "^1.8.1"
 flake8 = "^5.0.4"
 isort = {extras = ["colors"], version = "^5.10.1"}
